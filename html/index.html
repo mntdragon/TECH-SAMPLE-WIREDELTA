@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TECH SAMPLE</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">  
+    <link href="../css/style.css" rel="stylesheet">   
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>TECH SAMPLE</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">TECH SAMPLE</h4>
+                        <p class="text-muted">A small project by Javascript, CSS and HTML. There are task: cthe afe calculator, the lifetime supply calculator, the geometrizer and the temperature converter. </p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Task list</h4>
+                        <ul class="list-unstyled">
+                          <li><a href="#task1" class="text-white">Task 1</a></li>
+                          <li><a href="#task2" class="text-white">Task 2</a></li>
+                          <li><a href="#task3" class="text-white">Task 3</a></li>
+                          <li><a href="#task4" class="text-white">Task 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center mb-5 header-color">WIREDELTA TEST</h2>
+            <ul class="nav nav-fill">
+                <a class="nav-item nav-color" href="#task1">Task 1</a>
+                <a class="nav-item nav-color" href="#task2">Task 2</a>
+                <a class="nav-item nav-color" href="#task3">Task 3</a>
+                <a class="nav-item nav-color" href="#task4">Task 4</a>
+            </ul>
+        <hr />
+        </div>
+    </div>        
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <span class="anchor" id="task1"></span>
+             <!-- TASK 1 -->
+             <div class="card card-outline-success card-mar">
+                <div class="card-header task1-header">
+                    <h1 class="card-title text-center">THE AGE CALCULATOR</h1>
+                </div>
+                <div class="card-body">
+                        <div class="form-group">
+                            <label class="control-label">Birth year</label>
+                            <input type="text" id="birthYear" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Current Year</label>
+                            <input type="text" id="currentYear" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-task1" onclick="calculateAge()">Calculate Age</button>
+                            <p class="float-right result"id="result1"></p>
+                        </div>
+                        <div class="form-group">
+                        <p class="text-center warning-fb" id="warning-task1"></p>
+                        </div>
+                            
+                        
+                 </div>   
+            </div> <!-- card 1-->
+        </div>
+    <hr />    
+        <div class="col-lg-6 offset-lg-3">
+                <span class="anchor" id="task2"></span>
+                <!-- TASK 2 -->
+                <div class="card card-outline-success card-mar">
+                   <div class="card-header task2-header">
+                       <h1 class="card-title text-center">THE LIFETIME SUPPLY CALCULATOR</h1>
+                   </div>
+                   <div class="card-body">
+                           <div class="form-group">
+                               <label class="control-label">Your age</label>
+                               <input type="text" id="current_age" class="form-control" required>
+                           </div>
+                           <div class="form-group">
+                               <label class="control-label">Estimate amount per day</label>
+                               <input type="text" id="amount_per_day" class="form-control" required>
+                           </div>
+                           <div class="form-group">
+                               <button class="btn btn-task2" onclick="calculateSupply(current_age, amount_per_day)">Calculate Supply</button>
+                           </div>
+                           <div class="form-group">
+                                <p class = "result" id="result2"></p>
+                                <p class="text-center warning-fb" id="warning-task2"></p>
+                           </div>
+                               
+                           
+                    </div>   
+               </div> <!-- card 2-->
+           </div>
+        <hr />   
+        <div class="col-lg-6 offset-lg-3">
+                <span class="anchor" id="task3"></span>
+                <!-- TASK 3 -->
+                <div class="card card-outline-success card-mar">
+                   <div class="card-header task3-header">
+                       <h1 class="card-title text-center">THE GEOMETRIZER</h1>
+                   </div>
+                   <div class="card-body">
+                           <div class="form-group">
+                               <label class="control-label">Radius</label>
+                               <input type="text" id="radius" class="form-control" required>
+                           </div>
+                           <div class="form-group">
+                                <button class="btn btn-task31" onclick="calcCircumfrence(radius)">Calculate Circumfrence</button>
+                                <p class="float-right result" id="result31"></p>
+                           </div>
+                           <div class="form-group">
+                                <button class="btn btn-task32" type="button" onclick="calcArea(radius)">Calculate Area</button>
+                                <p class="float-right result" id="result32"></p>
+                            </div>
+                            <div class="form-group">
+                                <p class="text-center warning-fb" id="warning-task3"></p>
+                           </div>   
+                    </div>   
+               </div> <!-- card 3-->
+           </div>
+        <hr />   
+        <div class="col-lg-6 offset-lg-3">
+                <span class="anchor" id="task4"></span>
+                <!-- TASK 4 -->
+                <div class="card card-outline-success card-mar">
+                   <div class="card-header task4-header">
+                       <h1 class="card-title text-center">THE TEMPERATURE CONVERTER</h1>
+                   </div>
+                   <div class="card-body">
+                           <div class="form-group">
+                               <label class="control-label">Celsius</label>
+                               <input type="text" id="cel" class="form-control" required>
+                           </div>
+                           <div class="form-group">
+                                <button class="btn btn-task41" onclick="celsiusToFahrenheit(cel)">°F to °C</button>
+                                <p class="float-right result" id="result41"></p>
+                           </div>   
+                           <div class="form-group">
+                                <label class="control-label">Fahrenheit</label>
+                                <input type="text" id="fah" class="form-control" required>
+                            </div>
+                           <div class="form-group">
+                                <button class="btn btn-task42" type="button" onclick="fahrenheitToCelsius(fah)">°C to °F</button>
+                                <p class="float-right result" id="result42"></p>
+                            </div>
+                           <div class="form-group">
+                                <p class="text-center warning-fb" id="warning-task4"></p>
+                           </div>   
+                    </div>   
+               </div> <!-- card 4-->
+           </div>
+        <hr />      
+    </div> <!-- row -->
+    <!-- TASK 4 -->
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="../js/task.js"></script>
+</body>
+</html>
